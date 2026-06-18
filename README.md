@@ -1,6 +1,6 @@
 Markdown
 ## Tài liệu API - Quản lý Từ vựng (Words)
-Phụ trách bởi: [Tên của bạn]
+Phụ trách bởi: [Phạm Hải Đăng]
 
 Module này chịu trách nhiệm quản lý hệ thống từ vựng (duyệt, tìm kiếm, lấy dữ liệu từ API từ điển bên ngoài, và thêm vào danh sách học của người dùng) trong cơ sở dữ liệu `vocabmaster`.
 
