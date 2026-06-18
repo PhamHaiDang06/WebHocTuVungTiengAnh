@@ -1,11 +1,11 @@
 const db = require("../config/db");
 
 // CREATE Vocabulary
-exports.createVocabulary = (req, res) => {
+exports.createvocabmaster = (req, res) => {
     const { word, meaning, example, topic_id } = req.body;
 
     const sql = `
-        INSERT INTO Vocabulary(word, meaning, example, topic_id)
+        INSERT INTO vocabmaster(word, meaning, example, topic_id)
         VALUES (?, ?, ?, ?)
     `;
 
@@ -21,7 +21,7 @@ exports.createVocabulary = (req, res) => {
             }
 
             res.status(201).json({
-                message: "Vocabulary created successfully",
+                message: "vocabmaster created successfully",
                 id: result.insertId
             });
         }
@@ -29,7 +29,7 @@ exports.createVocabulary = (req, res) => {
 };
 
 // READ All Vocabulary
-exports.getAllVocabulary = (req, res) => {
+exports.getAllvocabmaster = (req, res) => {
 
     const sql = `
         SELECT v.*, t.topic_name
@@ -58,7 +58,7 @@ exports.getVocabularyById = (req, res) => {
 
     const sql = `
         SELECT *
-        FROM Vocabulary
+        FROM vocabmaster
         WHERE id = ?
     `;
 
@@ -94,7 +94,7 @@ exports.updateVocabulary = (req, res) => {
     } = req.body;
 
     const sql = `
-        UPDATE Vocabulary
+        UPDATE vocabmaster
         SET word = ?,
             meaning = ?,
             example = ?,
@@ -127,7 +127,7 @@ exports.deleteVocabulary = (req, res) => {
     const id = req.params.id;
 
     const sql = `
-        DELETE FROM Vocabulary
+        DELETE FROM vocabmaster
         WHERE id = ?
     `;
 
