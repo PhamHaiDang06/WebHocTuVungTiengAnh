@@ -16,7 +16,7 @@ const Word             = require('../models/Word');
 const UserProgress     = require('../models/UserProgress');
 const AppError         = require('../utils/AppError');
 const ApiResponse      = require('../utils/ApiResponse');
-const { fetchWordFromAPI } = require('../services/dictionary.service');
+const { fetchWordFromAPI } = require('../services/gamification.service');
 
 // ─────────────────────────────────────────────
 // Public Endpoints
